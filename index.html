@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>	
+    <meta charset="UTF-8">
+    <title>mukgaebi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn(1500);
+    $("#div3").fadeIn(3000);
+
+  });
+});
+</script>
+
+<style>
+
+body {
+background-color: #FFEEEE;  
+background-image: url('back1.png');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 40%;
+background-position:center;
+
+
+ cursor:url(cursor.png),pointer;
+
+
+}
+
+
+	.raleway{font-family: 'Raleway', sans-serif;}
+	.noto{font-family: 'Noto Sans KR', sans-serif;position:relative;}
+	.title{position:relative;
+		top:1px;left:20px;font-size: 20px;}
+	
+	.bodytl{line-height:30px;}	
+	.full{position:relative;top:300px;left:1000px;}	
+	.clock{position:relative;top:43px;font-size:20px;}
+	.centered { display: table; margin-left: auto; margin-right: auto; }
+	/*.moving {
+width: 70px;
+height:70px;
+ background-color:none;
+position:fixed;
+
+    
+}
+.moving2{
+width: 70px;
+height:70px;
+ background-color:none;
+position:fixed;
+
+    
+}
+.moving3{
+width: 70px;
+height:70px;
+ background-color:none;
+position:fixed;
+
+    
+}*/
+.dance {
+
+  background-color: none;
+  position: relative;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+
+}
+
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  0%   {left:10px; top:10px;}
+  25%  {left:200px; top:0px;}
+  50%  {left:200px; top:200px;}
+  75%  {left:0px; top:200px;}
+  100% {left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  0%   {left:0px; top:0px;}
+  25%  {left:200px; top:0px;}
+  50%  {left:200px; top:200px;}
+  75%  {left:0px; top:200px;}
+  100% {left:0px; top:0px;}
+}
+
+
+
+
+	</style>
+
+</head>
+	
+<body>
+
+
+
+
+
+
+		
+		<div class="title"><div style="float:left;margin:1%0%10%0%;"><img src="sweetenergy.png" width="200px"> </div></div></div>
+
+
+			<div style="clear:both;"></div>
+
+
+		<div class="centered"><div style="float:left;margin:0% 0% 0% 0%;"><div class="dance"><img src="sandwich.png" width="100px"></div><a href="drag.html"><img src="fullcolor.png" width="300px;" height="auto"></a></div>  </div>
+  
+
+  
+
+		<a href="receipt.html"><div style="float:left;margin:5% 20% 0% 7%;"><div class="dance"><img src="tomato1.png" width="100px"></div><img src="receipt.png" width="550px;" height="auto"></a></div>
+   
+<div class="dance"><img src="taco1.png" width="100px"></div>
+
+		<a href="catch.html"><div style="float:left;margin:5% 0% 0% 0%;"><img src="menu.png" width="550px;" height="auto"></a></div>
+		&nbsp;&nbsp;  
+
+
+
+
+      <div style="clear:both;"></div>
+</body>
+
+
+<!--
+<script>
+
+
+$(document).ready(function(){
+    animateDiv();
+    
+});
+
+function makeNewPosition(){
+    
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $(window).height() - 50;
+    var w = $(window).width() - 50;
+    
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+    
+    return [nh,nw];    
+    
+}
+
+function animateDiv(){
+    var newq = makeNewPosition();
+    var oldq = $('.moving').offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+    
+    $('.moving').animate({ top: newq[0], left: newq[1] }, speed, function(){
+      animateDiv();        
+    });
+
+
+     var newq = makeNewPosition();
+    var oldq = $('.moving2').offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+    
+    $('.moving2').animate({ top: newq[0], left: newq[1] }, speed, function(){
+      animateDiv();        
+    });
+
+
+         var newq = makeNewPosition();
+    var oldq = $('.moving3').offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+    
+    $('.moving3').animate({ top: newq[0], left: newq[1] }, speed, function(){
+      animateDiv();        
+    });
+    };
+
+
+
+
+
+function calcSpeed(prev, next) {
+    
+    var x = Math.abs(prev[0] - next[0]);
+    var y = Math.abs(prev[0] - next[0]);
+    
+    var greatest = x > y ? x : y;
+    
+    var speedModifier = 0.05;
+
+    var speed = Math.ceil(greatest/speedModifier);
+
+    return speed;
+
+}
+
+$(document).ready(function(){
+  $(".moving").click(function(){
+    $(".moving").hide();
+  });
+});
+
+$(document).ready(function(){
+  $(".moving2").click(function(){
+    $(".moving2").hide();
+  });
+});
+
+
+$(document).ready(function(){
+  $(".moving3").click(function(){
+    $(".moving3").hide();
+  });
+});
+
+
+
+</script>-->
+
+</html>

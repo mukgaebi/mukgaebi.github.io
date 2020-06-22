@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>mukgaebi</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kranky&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+  <script>
+    var sec = 0;
+
+/* pad - calculates whether a number needs leading zero padding or not */
+function pad(val) {
+    return (val > 9) ? val : '0' + val;
+}
+
+var timeSincePageLoaded = setInterval(function() {
+/* page loaded timer */
+     document.getElementById('minutes').innerHTML = pad(parseInt(sec / 60, 10));
+    document.getElementById('seconds').innerHTML = pad(++sec % 60);
+}, 1000);
+
+/* session limit exceeded stops the timer */
+function sessionLimitExceeded() { 
+  clearInterval(timeSincePageLoaded); 
+}
+  </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn(1500);
+    $("#div3").fadeIn(3000);
+  });
+});
+</script>
+
+
+    <script>
+
+
+/*시계스크립트*/
+    var sec = 0;
+
+/* pad - calculates whether a number needs leading zero padding or not */
+function pad(val) {
+    return (val > 9) ? val : '0' + val;
+}
+
+var timeSincePageLoaded = setInterval(function() {
+/* page loaded timer */
+     document.getElementById('minutes').innerHTML = pad(parseInt(sec / 60, 10));
+    document.getElementById('seconds').innerHTML = pad(++sec % 60);
+}, 1000);
+
+/* session limit exceeded stops the timer */
+function sessionLimitExceeded() { 
+  clearInterval(timeSincePageLoaded); 
+}
+  </script>
+<script>window.print_this = function(id) {
+    var prtContent = document.getElementById(id);
+    var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+    
+    WinPrint.document.write('<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">');
+    
+    // To keep styling
+    /*var file = WinPrint.document.createElement("link");
+    file.setAttribute("rel", "stylesheet");
+    file.setAttribute("type", "text/css");
+    file.setAttribute("href", 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+    WinPrint.document.head.appendChild(file);*/
+
+    
+    WinPrint.document.write(prtContent.innerHTML);
+    WinPrint.document.close();
+    WinPrint.setTimeout(function(){
+      WinPrint.focus();
+      WinPrint.print();
+      WinPrint.close();
+    }, 1000);
+}</script>
+<style>
+    ul {
+
+list-style-type: none;
+padding-left:0px;
+
+
+}
+
+li {
+
+  float: left;
+
+}
+
+li a {
+  display: block;
+  color:red;
+  text-align: left;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  color:red;
+  background-color:none;
+}
+
+li a.active {
+  color: white;
+  background-color:none;
+}   
+
+
+
+
+.body,html{
+
+ cursor:url(cursor.png),pointer;
+
+}
+
+
+body {
+  font-family: Raleway;
+  color: white;
+}
+
+
+hr { 
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-width: 1px;
+
+
+} 
+
+* {
+  box-sizing: border-box;
+}
+
+
+.reference{float:left;}
+
+.lhalf {
+  float: left;
+  width:20%;
+  padding: 2px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.raleway{font-family: 'Raleway', sans-serif;}
+.split {
+  height: 100%;
+  width: 80%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+ .noto{font-family: 'Noto Sans KR', sans-serif;}
+
+.left {
+  left:0%;
+  background-color: red;
+}
+
+.right {
+  right: 0;
+  background-color: #FFEEEE;
+}
+.ltext
+{position:relative;left:2%;}
+
+.rtext
+{position:relative;left:2%;}
+
+.clock{position:relative;left:2%;}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.centered img {
+  width: 5px;
+  border-radius: 50%;
+}
+
+.nemo_float{width: 15%; height: auto; position: relative; float: left; margin: 2% 2.5% 2% 2.5%; background-color: none; }
+
+
+.food_float{position: relative; float: left; }
+.lfood_float{position: relative; float: left; margin:0px 0px 0px 200px; }
+.food_box{background-position:center; position: relative; float: left; }
+
+  .moving {
+width: 70px;
+height:70px;
+ background-color:none;
+position:fixed;
+opacity:0.7;
+    
+}
+.moving2{
+width: 70px;
+height:70px;
+ background-color:none;
+position:fixed;
+opacity:0.7;
+    
+}
+.moving3{
+width: 70px;
+height:70px;
+ background-color:none;
+position:fixed;
+opacity:0.7;
+    
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="split left">
+<!--왼쪽 시작-->
+
+
+
+
+<div class="clock">
+<!--왼쪽 전체적용-->
+<div style="margin: 0% 0% 2% 0%"><a href="index.html"> <img src="back2.png" width="50px"></div></a>
+<div class="container theme-showcase" role="main">
+  <div id="to_print" class="jumbotron">
+<!--핫도그까지 인쇄시작div-->
+<div style="font-family:Kranky;position:fixed; left:20px;background-color:red;width:auto; height:30px;font-size:20px;font-color:white;">Meal Time&nbsp;&nbsp;<span id="minutes">00</span>:<span id="seconds">00</span></div>
+<div style="clear:both;"></div>
+<!--시계-->
+<div style="clear:both;"></div>
+<div style="font-family:Kranky;color:white;font-size:20px;">RECEIPT</div>
+<div style="font-family:Raleway;float:left;font-size:12px;"><p id="date"></p></div>
+<div style="clear:both;"></div>
+<!--날짜-->
+<div style="width:auto; height:150px;font-family:Kranky; float:left; font-size:15px;">
+<br>Receipt for your eye-eating.<div style="line-height:30px;">Drag the amount you ate.</div>
+<hr align="left" style="border: 1px dashed pink; width:280px"/></div>
+<!--설명-->
+<div style="clear:both;"></div>
+
+<!--왼쪽 단락시작-->
+<div class="food_box">
+    <img src="bhotdog.png" alt="hotdog" style="width:20%">
+</div>
+
+<div class="food_float">
+  <div style="font-family:Kranky;color:white;font-size:15px;">Hot dog<div style="line-height: 20px;">0kcal</div></div>
+  <hr align="left" style="border: 1px dashed pink; width:280px"/>
+</div>
+
+
+<div style="clear:both;"></div>
+
+<div class="lfood_float"><button type="button" class="btn btn-lg btn-default print_no" onclick="print_this('to_print')"><div style="font-family: Kranky">Up to here</div></button></div>
+
+
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<!--단락끝 -->
+
+<div class="food_box">
+    <img src="bhamburger.png" alt="hotdog" style="width:20%">
+</div>
+
+<div class="food_float">
+  <div style="font-family:Kranky;color:white;font-size:15px;">Hamburger<div style="line-height: 20px;">0kcal</div></div>
+  <hr align="left" style="border: 1px dashed pink; width:280px"/>
+</div>
+
+
+<div style="clear:both;"></div>
+
+<div class="lfood_float"><button type="button" class="btn btn-lg btn-default print_no" onclick="print_this('to_print')"><div style="font-family: Kranky">Up to here</div></button></div>
+
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<!--단락끝 -->
+
+
+<div class="food_box">
+    <img src="bpizza.png" alt="hotdog" style="width:20%">
+</div>
+
+<div class="food_float">
+  <div style="font-family:Kranky;color:white;font-size:15px;">Pizza<div style="line-height: 20px;">0kcal</div></div>
+  <hr align="left" style="border: 1px dashed pink; width:280px"/>
+</div>
+
+
+<div style="clear:both;"></div>
+
+<div class="lfood_float"><button type="button" class="btn btn-lg btn-default print_no" onclick="print_this('to_print')"><div style="font-family: Kranky">Up to here</div></button></div>
+
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<!--단락끝 -->
+
+<div class="food_box">
+    <img src="bdoughnut.png" alt="hotdog" style="width:20%">
+</div>
+
+<div class="food_float">
+  <div style="font-family:Kranky;color:white;font-size:15px;">Doughnut<div style="line-height: 20px;">0kcal</div></div>
+  <hr align="left" style="border: 1px dashed pink; width:280px"/>
+</div>
+
+
+<div style="clear:both;"></div>
+
+<div class="lfood_float"><button type="button" class="btn btn-lg btn-default print_no" onclick="print_this('to_print')"><div style="font-family: Kranky">Up to here</div></button></div>
+
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<!--단락끝 -->
+
+<div class="food_box">
+    <img src="bdeokboki.png" alt="hotdog" style="width:20%">
+</div>
+
+<div class="food_float">
+  <div style="font-family:Kranky;color:white;font-size:15px;">Tteokboki<div style="line-height: 20px;">0kcal</div></div>
+  <hr align="left" style="border: 1px dashed pink; width:280px"/>
+</div>
+
+
+<div style="clear:both;"></div>
+
+<div class="lfood_float"><button type="button" class="btn btn-lg btn-default print_no" onclick="print_this('to_print')"><div style="font-family: Kranky">Up to here</div></button></div>
+
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<!--단락끝 -->
+
+
+
+<div class="food_box">
+    <img src="bramen.png" alt="ramen" style="width:20%">
+</div>
+
+<div class="food_float">
+  <div style="font-family:Kranky;color:white;font-size:15px;">Ramen<div style="line-height: 20px;">0kcal</div></div>
+  <hr align="left" style="border: 1px dashed pink; width:280px"/>
+</div>
+
+
+<div style="clear:both;"></div>
+
+<div class="lfood_float"><button type="button" class="btn btn-lg btn-default print_no" onclick="print_this('to_print')"><div style="font-family: Kranky">Up to here</div></button></div>
+
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<!--단락끝 -->
+
+
+
+<div class="food_box">
+    <img src="bkimchi.png" alt="kimchi" style="width:20%">
+</div>
+
+<div class="food_float">
+  <div style="font-family:Kranky;color:white;font-size:15px;">Kimchi Fried Rice<div style="line-height: 20px;">0kcal</div></div>
+  <hr align="left" style="border: 1px dashed pink; width:280px"/>
+</div>
+
+
+<div style="clear:both;"></div>
+
+<div class="lfood_float"><button type="button" class="btn btn-lg btn-default print_no" onclick="print_this('to_print')"><div style="font-family: Kranky">Up to here</div></button></div>
+
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<!--단락끝 -->
+
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--오른쪽시작-->
+
+
+<div style="width:auto; height:150px; float:left; font-size:50px;"><div class="split right"><font color="red"><div class="raleway">
+
+<!--
+<div style="position:fixed; right:20px;background-color:#FFEEEE; font-family:raleway;width:auto; height:50px;font-size:20px;font-color:white;">Meal Time&nbsp;&nbsp;<span id="minutes">00</span>:<span id="seconds">00</span></div>
+<div style="clear:both;"></div>
+-->
+<!--<div style="font-family:Kranky;width:1200px; margin-left:30px;margin-top:30px;height:auto; float:left; font-size:70px; line-height: 30px;">Eat as much food as you want here</div>-->
+<div style="margin: 2% 0% 0% 30%;"><img src="eatasmuch.png" width="50%"></div>
+<div style="margin: 2% 0% 0% 20%; opacity: 0.5;"><img src="thisplace.png" width="70%"></div>
+<hr align="left" style="border: 1px dashed red; width:1300px">
+
+<!--
+<div style="font-family:Raleway;width:1200px;color:red; margin-left:30px; margin-top:30px;height:auto; float:left; font-size:30px; line-height: 40px;">
+This place will make yourself full just by looking at it as we contain a variety of food. Your bill for today will be filled out as long as you stay and look here. Please print out the receipt when you leave. Enjoy your meal!</div>
+
+<div style="width:1200px; font-family: Noto Sans KR; color:red;margin-left:30px; margin-top:30px;height:auto; float:left; font-size:20px; line-height: 40px;">이곳은 보기만해도 배불러지는 공간입니다. 다양한 음식들이 담긴 이 곳에서 즐거운 식사를 즐기시기 바랍니다. 머물러 보시는 시간에 따라 가격이 측정되니, 나가실 때 영수증을 출력해주시기 바랍니다. 맛있게 드세요!</div>-->
+
+  <!--  <div class="moving"><img src="taco.png" width="100%"></div> 
+
+    <div class="moving2"><img src="tomato.png" width="100%"></div> 
+
+    <div class="moving3"><img src="sandwich.png" width="100%"></div> -->
+
+<ul>
+<div style="font-size:35px;color:red;"><div class="nemo_float"><li><a href="#Western">
+<div style="font-family:Kranky;">Western</div>
+<div style="margin-top:14px;font-family: 'Noto Sans KR', sans-serif;font-size:20px;">양식</div>
+</div></div></a></li>
+<div style="font-size:35px;color:red;"><div class="nemo_float"><li><a href="#Korean">
+<div style="font-family:Kranky;">Korean</div>
+<div style="margin-top:14px;font-family: 'Noto Sans KR', sans-serif;font-size:20px;">한식</div>
+</div></div></a></li>
+<div style="font-size:35px;color:red;"><div class="nemo_float"><li><a href="#Chinese">
+<div style="font-family:Kranky;">Chinese</div>
+<div style="margin-top:14px;font-family: 'Noto Sans KR', sans-serif;font-size:20px;">중식</div>
+</div></div></a></li>
+<div style="font-size:35px;color:red;"><div class="nemo_float"><li><a href="#Japanese">
+<div style="font-family:Kranky;">Japanese</div>
+<div style="margin-top:14px;font-family: 'Noto Sans KR', sans-serif;font-size:20px;">일식</div>
+</div></div></a></li>
+<div style="font-size:35px;color:red;"><div class="nemo_float"><li><a href="#Dessert">
+<div style="font-family:Kranky;">Dessert</div>
+<div style="margin-top:14px;font-family: 'Noto Sans KR', sans-serif;font-size:20px;">디저트</div>
+</div></div></a></li>
+</ul>
+<!--
+.food_float{position: relative; float: left;background-color: none; }
+.food_box{ text-align:center;position: relative; float: left;background-color: none; }
+
+
+화면 분할 하고 왼쪽편 영역에 대응하게 일러스트+글 하고 영역 지정해서 내가 본 만큼=내가 먹은 만큼 인쇄할 수 있게
+-->
+
+
+<!--본문시작 -->
+<div id="Western">
+<div class="food_box"><div style="margin:7% 5% 0% 16%;"><img src="hotdog.png" width="450px;" height="auto"></div></div></div>
+
+<div class="food_float"><div style="margin: 7% 0% 2% 26%;">
+
+  <div style="font-family:Kranky;color:red;font-size:30px;">Hotdog</div>
+  <div style="font-family: 'Noto Sans KR', sans-serif;font-size:20px; line-height:40px;color:red">핫도그</div>
+  <div style="line-height:30px; font-size:15px;">가래떡을 적당한 크기로 잘라 여러 가지 채소를 넣고 양념을 하여 볶은 음식. 양념은 간장으로 하기도 하고, 고추장으로 하기도 한다.</div>
+  <div style="padding:10px"></div>
+
+  <div class="food_float"><div style="margin:auto;"><iframe width="340" height="191.25" src="https://www.youtube.com/embed/h3tDzfYnh60?start=10" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<div style="clear:both;"></div>
+</div></div>
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<!--단락끝 -->
+
+<div class="food_box"><div style="margin:7% 5% 0% 16%;"><img src="hamburger.png" width="450px;" height="auto"></div></div>
+
+<div class="food_float"><div style="margin: 7% 0% 2% 26%;">
+
+  <div style="font-family:Kranky;color:red;font-size:30px;">Hamburger</div>
+  <div style="font-family: 'Noto Sans KR', sans-serif;font-size:20px; line-height:40px;color:red">햄버거</div>
+  <div style="line-height:30px; font-size:15px;">햄버거는 샌드위치의 일종인 음식이다. 동그랗거나 길쭉한 빵 사이에 넣어 만들며, 보통 손으로 쥐면서 들고 먹는다.</div>
+  <div style="padding:10px"></div>
+
+  <div class="food_float"><div style="margin:auto;"><iframe width="340" height="191.25" src="https://www.youtube.com/embed/5lh5YnxCOqg?start=25" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<div style="clear:both;"></div>
+</div></div>
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<!--단락끝 -->
+
+<div class="food_box"><div style="margin:7% 5% 0% 16%;"><img src="doughnut.png" width="450px;" height="auto"></div></div>
+
+<div class="food_float"><div style="margin: 7% 0% 2% 26%;">
+
+  <div style="font-family:Kranky;color:red;font-size:30px;">Doughnut</div>
+  <div style="font-family: 'Noto Sans KR', sans-serif;font-size:20px; line-height:40px;color:red">도넛</div>
+  <div style="line-height:30px; font-size:15px;">도넛은 소맥분에 설탕, 버터, 달걀 등을 혼합하고 기름으로 튀긴 식품이다.도넛은 작은 전문점이나, 카페테리아 등에서 판매된다.
+  </div>
+  <div style="padding:10px"></div>
+
+  <div class="food_float"><div style="margin:auto;"><iframe width="340" height="191.25" src="https://www.youtube.com/embed/CWpj-hwh5IQ?start=25" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<div style="clear:both;"></div>
+</div></div>
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<!--단락끝 -->
+
+<div class="food_box"><div style="margin:7% 5% 0% 16%;"><img src="pizza.png" width="450px;" height="auto"></div></div>
+
+<div class="food_float"><div style="margin: 7% 0% 2% 26%;">
+
+  <div style="font-family:Kranky;color:red;font-size:30px;">Pizza</div>
+  <div style="font-family: 'Noto Sans KR', sans-serif;font-size:20px; line-height:40px;color:red">피자</div>
+  <div style="line-height:30px; font-size:15px;"> 밀가루 반죽 위에 토마토 소스, 모차렐라 치즈를 얹어서 둥글고 납작한 형태로 구운 빵으로, 다양한 종류의 토핑을 선택하여 얹을 수 있다.</div>
+  <div style="padding:10px"></div>
+
+  <div class="food_float"><div style="margin:auto;"><iframe width="340" height="191.25" src="https://www.youtube.com/embed/-jXGHI7bku4?start=26" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<div style="clear:both;"></div>
+</div></div>
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<!--단락끝 -->
+
+
+
+<div id="Korean">
+<div class="food_box"><div style="margin:7% 5% 0% 16%;"><img src="deokboki.png" width="450px;" height="auto"></div></div></div>
+
+<div class="food_float"><div style="margin: 7% 0% 2% 26%;">
+
+  <div style="font-family:Kranky;color:red;font-size:30px;">Tteok-bokki</div>
+  <div style="font-family: 'Noto Sans KR', sans-serif;font-size:20px; line-height:40px;color:red">떡볶이</div>
+  <div style="line-height:30px; font-size:15px;">가래떡을 적당한 크기로 잘라 여러 가지 채소를 넣고 양념을 하여 볶은 음식. 양념은 간장으로 하기도 하고, 고추장으로 하기도 한다.</div>
+  <div style="padding:10px"></div>
+
+  <div class="food_float"><div style="margin:auto;"><iframe width="340" height="191.25" src="https://www.youtube.com/embed/KeWcjcuR-Io?start=146" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<div style="clear:both;"></div>
+</div></div>
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<!--단락끝 -->
+
+<div class="food_box"><div style="margin:7% 5% 0% 16%;"><img src="ramen.png" width="450px;" height="auto"></div></div>
+
+<div class="food_float"><div style="margin: 7% 0% 2% 26%;">
+
+  <div style="font-family:Kranky;color:red;font-size:30px;">Ramen</div>
+  <div style="font-family: 'Noto Sans KR', sans-serif;font-size:20px; line-height:40px;color:red">라면</div>
+  <div style="line-height:30px; font-size:15px;">라면은 기름에 미리 튀긴 국수를 후레이크와 스프와 함께 끓는 물에 넣어서 요리하는 국수 식품이자 인스턴트 식품이다.</div>
+  <div style="padding:10px"></div>
+
+  <div class="food_float"><div style="margin:auto;"><iframe width="340" height="191.25" src="https://www.youtube.com/embed/m-u_c3iZ4Ws?start=31" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<div style="clear:both;"></div>
+</div></div>
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<!--단락끝 -->
+
+<div class="food_box"><div style="margin:7% 5% 0% 16%;"><img src="haemul.png" width="450px;" height="auto"></div></div>
+
+<div class="food_float"><div style="margin: 7% 0% 2% 26%;">
+
+  <div style="font-family:Kranky;color:red;font-size:30px;">Spicy Seafood Stew</div>
+  <div style="font-family: 'Noto Sans KR', sans-serif;ont-family:noto;font-size:20px; line-height:40px;color:red">해물뚝배기</div>
+  <div style="line-height:30px; font-size:15px;"> 갖가지 싱싱한 해물과 된장을 풀어 넣고 끓여 바다내음이 물씬 풍기며 담백하고 시원한 맛이 일품으로 최고의 속풀이 해장국으로 손꼽힌다.</div>
+  <div style="padding:10px"></div>
+
+  <div class="food_float"><div style="margin:auto;"><iframe width="340" height="191.25" src="https://www.youtube.com/embed/mEyNl2p-5Mw?start=37" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<div style="clear:both;"></div>
+</div></div>
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<!--단락끝 -->
+
+<div class="food_box"><div style="margin:7% 5% 0% 16%;"><img src="kimchi.png" width="450px;" height="auto"></div></div>
+
+<div class="food_float"><div style="margin: 7% 0% 2% 26%;">
+
+  <div style="font-family:Kranky;color:red;font-size:30px;">Kimchi Fried Rice</div>
+  <div style="font-family: 'Noto Sans KR', sans-serif;font-size:20px; line-height:40px;color:red">김치볶음밥</div>
+  <div style="line-height:30px; font-size:15px;">김치볶음밥은 한국의 대중적인 요리의 하나이자 볶음밥의 일종으로서 김치와 밥을 주재료로 프라이팬 등에서 볶은 요리다.</div>
+  <div style="padding:10px"></div>
+
+  <div class="food_float"><div style="margin:auto;"><iframe width="340" height="191.25" src="https://www.youtube.com/embed/f_wNr_os4ss?start=160" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<div style="clear:both;"></div>
+</div></div>
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<!--단락끝 -->
+<div class="food_box"><div style="margin:7% 5% 0% 16%;"><img src="bibimbap.png" width="450px;" height="auto"></div></div>
+
+<div class="food_float"><div style="margin: 7% 0% 2% 26%;">
+
+  <div style="font-family:Kranky;color:red;font-size:30px;">Bibimbap</div>
+  <div style="font-family: 'Noto Sans KR', sans-serif;font-size:20px; line-height:40px;color:red">비빔밥</div>
+  <div style="line-height:30px; font-size:15px;">비빔밥은 대표적인 한국 요리의 하나로, 밥에 고기나 나물, 달걀 등과 고추장, 참기름 등 양념을 넣고 비벼서 섞어 먹는 음식이다. </div>
+  <div style="padding:10px"></div>
+
+  <div class="food_float"><div style="margin:auto;"><iframe width="340" height="191.25" src="https://www.youtube.com/embed/aNv1qbcCjdY?start=86" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<div style="clear:both;"></div>
+</div></div>
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<!--단락끝 -->
+<div class="food_box"><div style="margin:7% 5% 0% 16%;"><img src="samgyub.png" width="450px;" height="auto"></div></div>
+
+<div class="food_float"><div style="margin: 7% 0% 2% 26%;">
+
+  <div style="font-family:Kranky;color:red;font-size:30px;">Pork belly</div>
+  <div style="font-family: 'Noto Sans KR', sans-serif;font-size:20px; line-height:40px;color:red">삼겹살</div>
+  <div style="line-height:30px; font-size:15px;">삼겹살은 돼지의 갈비에 붙어 있는 살을 구운 한국 음식으로 비계와 살이 세 겹으로 되어 있는 것처럼 보이는 고기이다.</div>
+  <div style="padding:10px"></div>
+
+  <div class="food_float"><div style="margin:auto;"><iframe width="340" height="191.25" src="https://www.youtube.com/embed/GSf-6CuRe8M?start=145" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<div style="clear:both;"></div>
+</div></div>
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<!--단락끝 -->
+<div class="food_box"><div style="margin:7% 5% 0% 16%;"><img src="makguksu.png" width="450px;" height="auto"></div></div>
+
+<div class="food_float"><div style="margin: 7% 0% 2% 26%;">
+
+  <div style="font-family:Kranky;color:red;font-size:30px;">Buckwheat Noodles</div>
+  <div style="font-family: 'Noto Sans KR', sans-serif;font-size:20px; line-height:40px;color:red">막국수</div>
+  <div style="line-height:30px; font-size:15px;">막국수는 삶은 메밀국수에 김치와 무, 오이를 넉넉히 얹고 비빔 양념장을 넣어 한데 비벼 먹는 국수로 만든 향토 음식이다.</div>
+  <div style="padding:10px"></div>
+
+  <div class="food_float"><div style="margin:auto;"><iframe width="340" height="191.25" src="https://www.youtube.com/embed/D8o2n5A30a8?start=37" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<div style="clear:both;"></div>
+</div></div>
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<!--단락끝 -->
+
+<!--단락끝 -->
+<div class="food_box"><div style="margin:7% 5% 0% 16%;"><img src="kimchijeon.png" width="450px;" height="auto"></div></div>
+
+<div class="food_float"><div style="margin: 7% 0% 2% 26%;">
+
+  <div style="font-family:Kranky;color:red;font-size:30px;">Kimchi Pancake</div>
+  <div style="ffont-family: 'Noto Sans KR', sans-serif;font-size:20px; line-height:40px;color:red">김치부침개</div>
+  <div style="line-height:30px; font-size:15px;">밀가루 반죽에 잘 익은 김치를 송송 썰어 넣고 부친 전이다.식사 시 전채로 먹거나, 간식, 술안주, 혹은 반찬으로 먹는다. 
+</div>
+  <div style="padding:10px"></div>
+
+  <div class="food_float"><div style="margin:auto;"><iframe width="340" height="200" src="https://www.youtube.com/embed/NU5Eb8X785w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<div style="clear:both;"></div>
+</div></div>
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<!--단락끝 -->
+
+<div class="food_box"><div style="margin:7% 5% 0% 16%;"><img src="sundubu.png" width="450px;" height="auto"></div></div>
+
+<div class="food_float"><div style="margin: 7% 0% 2% 26%;">
+
+  <div style="font-family:Kranky;color:red;font-size:30px;">Spicy soft tofu soup</div>
+  <div style="font-family: 'Noto Sans KR', sans-serif;font-size:20px; line-height:40px;color:red">순두부찌개</div>
+  <div style="line-height:30px; font-size:15px;">순두부찌개는 순두부를 주재료로 한 한국 요리의 찌개이다. 때에 따라 달걀이나 버섯, 후춧가루, 고추기름 등을 넣기도 한다.</div>
+  <div style="padding:10px"></div>
+
+  <div class="food_float"><div style="margin:auto;"><iframe width="340" height="191.25" src="https://www.youtube.com/embed/284c6Nrc_yk?start=191" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<div style="clear:both;"></div>
+</div></div>
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<!--단락끝 -->
+
+<div id="Chinese">
+<div class="food_box"><div style="margin:7% 5% 0% 16%;"><img src="jajangmyeon.png" width="450px;" height="auto"></div></div>
+</div>
+<div class="food_float"><div style="margin: 7% 0% 2% 26%;">
+
+  <div style="font-family:Kranky;color:red;font-size:30px;">Black-bean-sauce noodles</div>
+  <div style="font-family: 'Noto Sans KR', sans-serif;font-size:20px; line-height:40px;color:red">짜장면</div>
+  <div style="line-height:30px; font-size:15px;">짜장면은 양파 등의 채소와 돼지고기와 춘장을 식용유와 함께 볶은 양념을 국수에 비벼서 먹는 한국식 중국 요리이다. </div>
+  <div style="padding:10px"></div>
+
+  <div class="food_float"><div style="margin:auto;"><iframe width="340" height="191.25" src="https://www.youtube.com/embed/yKjbRfxgEUo?start=50" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<div style="clear:both;"></div>
+</div></div>
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<!--단락끝 -->
+
+
+<div class="food_box"><div style="margin:7% 5% 0% 16%;"><img src="jjambong.png" width="450px;" height="auto"></div></div>
+
+<div class="food_float"><div style="margin: 7% 0% 2% 26%;">
+
+  <div style="font-family:Kranky;color:red;font-size:30px;">Chinese style noodles with vegetables and seafood</div>
+  <div style="font-family: 'Noto Sans KR', sans-serif;font-size:20px; line-height:40px;color:red">짬뽕</div>
+  <div style="line-height:30px; font-size:15px;">채소와 돼지고기, 해물 등을 기름에 볶아 닭이나 돼지뼈로 만든 육수를 넣고 끓인 국물에 삶은 국수를 말아서 먹는 중국음식이다.</div>
+  <div style="padding:10px"></div>
+
+  <div class="food_float"><div style="margin:auto;"><iframe width="340" height="191.25" src="https://www.youtube.com/embed/X90s6F5MBG4?start=445" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<div style="clear:both;"></div>
+</div></div>
+
+<br></br>
+<br></br> 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<!--단락끝 -->
+
+<div class="reference"><div style="font-size:15px; font-color:black; margin:0px 2px 10px 10px;"> sources</div></div>
+<p></p>
+<div class="reference"><div style="font-size:10px; font-color:black; margin:0px 2px 10px 10px;"> https://www.ebiga.co.kr/main/menu<p></p>
+   http://bonworld.co.kr/<p></p>index.php?mid=brend_menu&category=224&listStyle=viewer&document_srl=461
+<p></p>
+https://www.pngwing.com/ko
+<p></p>
+https://www.youtube.com/channel/UCc7v5yYC_mviB1_fLuB-GRw
+</div></div>
+
+</div></div></div></font>
+
+
+<!--프린트-->
+<script>
+  <script language="JavaScript"> 
+    function print() { 
+      if (document.all && window.print) { 
+        window.onbeforeprint = bef; 
+        window.onafterprint = aft; 
+        window.print(); 
+      } 
+    } 
+    
+    function bef() { 
+      if (document.all) { 
+        contents.style.display = 'none'; 
+        printArea.innerHTML = document.all['printArea'].innerHTML;
+      } 
+    }
+ 
+    function aft() { 
+      if (document.all) { 
+        contents.style.display = 'block'; 
+        printArea.innerHTML = ""; 
+      } 
+    } 
+</script>
+
+</script>
+ <script>
+    /*날짜스크립트*/
+var d = new Date();
+document.getElementById("date").innerHTML = d;
+  </script>
+
+
+</body>
+</html> 
+<script>
+
+
+$(document).ready(function(){
+    animateDiv();
+    
+});
+
+function makeNewPosition(){
+    
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $(window).height() - 50;
+    var w = $(window).width() - 50;
+    
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+    
+    return [nh,nw];    
+    
+}
+
+function animateDiv(){
+    var newq = makeNewPosition();
+    var oldq = $('.moving').offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+    
+    $('.moving').animate({ top: newq[0], left: newq[1] }, speed, function(){
+      animateDiv();        
+    });
+     var newq = makeNewPosition();
+    var oldq = $('.moving2').offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+    
+    $('.moving2').animate({ top: newq[0], left: newq[1] }, speed, function(){
+      animateDiv();        
+    });
+         var newq = makeNewPosition();
+    var oldq = $('.moving3').offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+    
+    $('.moving3').animate({ top: newq[0], left: newq[1] }, speed, function(){
+      animateDiv();        
+    });
+    };
+
+
+function calcSpeed(prev, next) {
+    
+    var x = Math.abs(prev[1] - next[1]);
+    var y = Math.abs(prev[0] - next[0]);
+    
+    var greatest = x > y ? x : y;
+    
+    var speedModifier = 0.15;
+
+    var speed = Math.ceil(greatest/speedModifier);
+
+    return speed;
+
+}
+
+$(document).ready(function(){
+  $(".moving").click(function(){
+    $(".moving").hide();
+  });
+});
+
+$(document).ready(function(){
+  $(".moving2").click(function(){
+    $(".moving2").hide();
+  });
+});
+
+
+$(document).ready(function(){
+  $(".moving3").click(function(){
+    $(".moving3").hide();
+  });
+});
+</script>
+
+
+</body>
+</html>
+
+
+

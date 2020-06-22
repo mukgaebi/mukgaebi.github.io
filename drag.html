@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>mukgaebi</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+<style>
+
+.body,html{
+ background: #FFEEEE;
+ cursor:url(cursor.png),pointer;
+
+
+}
+#div1 
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+
+}
+.left {
+  left:0%;
+  background-color:#FFEEEE;
+}
+.right {
+  right: 0;
+background-color: none;
+}
+
+
+  .main {
+    color: lighten($gray, 25%);
+    background-color: lighten(red, 60%);
+    grid-area: main;
+    padding: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  
+
+  .items {
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    transition: all 0.2s;
+    transform: scale(0.98);
+    will-change: transform;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .items.active {
+    background: rgba(255,255,255,0.3);
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+  }
+
+  .item {
+    display: inline-block;
+    background: none;
+    min-height: 250px;
+    min-width: auto;
+    margin: 2em 1em;
+    @media screen and (max-width: 500px) {
+      min-height: 200px;
+      min-width: 200px;
+    }
+  }
+
+
+
+
+p {
+  text-align: left;
+  text-indent: 20px;
+  font-weight: 100;
+}
+
+i {
+  color: skyblue;
+}
+ 
+</style>
+
+
+
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("img", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("img");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<script type="text/javascript">const slider = document.querySelector('.items');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mouseup', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mousemove', (e) => {
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  slider.scrollLeft = scrollLeft - walk;
+  console.log(walk);
+});</script>
+</head>
+<body>
+<div style="margin: 2% 0% 0% 2%"><a href="index.html"> <img src="back.png" width="50px"></div></a>
+
+  <div style=" margin: 2% 0% 0% 35%; color:red;"><img src="drag.png" width="50%;"></div>
+<div class="split left">
+<div style="margin:10% 0% 0% 40%;"> <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="mukmuk1.gif"></div></div>
+</div>
+
+<div class="split right">
+<div style="margin: 0% 0% 0% 4%;"><img src="fridge.png" width="300px"></div>
+
+
+  <main class="grid-item main">
+    <div class="items">
+      <div class="item item1"><img id="drag1" src="hamburger.png" draggable="true" ondragstart="drag(event)" width="200" height="auto"></div>
+      <div class="item item2"><img id="drag2" src="hotdog.png" draggable="true" ondragstart="drag(event)" width="200" height="auto"></div>
+      <div class="item item3"><img id="drag3" src="deokboki.png" draggable="true" ondragstart="drag(event)" width="200" height="auto"></div>
+      <div class="item item4"><img id="drag4" src="ramen.png" draggable="true" ondragstart="drag(event)" width="200" height="auto"></div>
+      <div class="item item5"><img id="drag5" src="sundubu.png" draggable="true" ondragstart="drag(event)" width="200" height="auto"></div>
+      <div class="item item6"><img id="drag6" src="jjambong.png" draggable="true" ondragstart="drag(event)" width="200" height="auto"></div>
+      <div class="item item7"><img id="drag7" src="muffin.png" draggable="true" ondragstart="drag(event)" width="200" height="auto"></div>
+      <div class="item item8"><img id="drag8" src="sushi.png" draggable="true" ondragstart="drag(event)" width="200" height="auto"></div>
+      <div class="item item9"><img id="drag9" src="jajangmyeon.png" draggable="true" ondragstart="drag(event)" width="200" height="auto"></div>
+      <div class="item item10"><img id="drag10" src="makguksu.png" draggable="true" ondragstart="drag(event)" width="200" height="auto"></div>
+      <div class="item item11"><img id="drag11" src="nacho.png" draggable="true" ondragstart="drag(event)" width="200" height="auto"></div>
+      <div class="item item12"><img id="drag12" src="spaghetti.png" draggable="true" ondragstart="drag(event)" width="200" height="auto"></div>
+      <div class="item item13"><img id="drag13" src="pizza.png" draggable="true" ondragstart="drag(event)" width="200" height="auto"></div>
+     <div class="item item14"><img id="drag14" src="nuget.png" draggable="true" ondragstart="drag(event)" width="200" height="auto"></div>
+     <div class="item item15"><img id="drag15" src="kimchi.png" draggable="true" ondragstart="drag(event)" width="200" height="auto"></div>
+     <div class="item item16"><img id="drag16" src="lamb.png" draggable="true" ondragstart="drag(event)" width="200" height="auto"></div>
+    </div>
+
+<div style="margin: 0%"></div>
+</body>
+
+
+
+</html>
